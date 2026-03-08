@@ -20,9 +20,12 @@ export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
     const API_URL =
       process.env.NEXT_PUBLIC_API_URL ||
       "https://wishperchat-fxvn.onrender.com";
+
+    console.log("Connecting to socket at:", API_URL);
+
     return io(API_URL, {
       autoConnect: false,
-      transports: ["websocket"], // Often better for deployment
+      transports: ["websocket"],
     });
   });
   const [isConnected, setIsConnected] = useState(false);
