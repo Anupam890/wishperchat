@@ -18,9 +18,8 @@ export const useSocket = () => useContext(SocketContext);
 export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
   const [socket] = useState(() => {
     const API_URL =
-      process.env.NEXT_PUBLIC_SOCKET_URL ||
       process.env.NEXT_PUBLIC_API_URL ||
-      "http://localhost:3001";
+      "https://wishperchat-fxvn.onrender.com";
     return io(API_URL, {
       autoConnect: false,
       transports: ["websocket"], // Often better for deployment
