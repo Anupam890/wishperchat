@@ -281,7 +281,7 @@ export default function ChatRoomPage() {
 
   const handleSendMessage = (
     content: string,
-    type: "text" | "whisper" = "text",
+    type: "text" | "whisper" | "sticker" = "text",
     selfDestructDelay?: number,
     isViewOnce?: boolean,
     recipientId?: string,
